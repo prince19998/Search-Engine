@@ -17,4 +17,7 @@ jobs:
       - name: Push to hub
         env:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
-        run: git push https://prince19998/Search_Engine_LLM :$HF_TOKEN@huggingface.co/spaces/princegupta19998/Search_Engine_LLM main
+        run: |
+          git config --global user.name "prince19998"
+          git config --global user.email "princegupta19998@gmail.com"
+          git push https://$HF_TOKEN@huggingface.co/spaces/princegupta19998/Search_Engine_LLM main
